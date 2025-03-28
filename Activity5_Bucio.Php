@@ -4,11 +4,36 @@
     <title> BMI Calculator </title>
     <style type="text/css">
 body { 
-    background: orange;
-    text-align: center;
-    justify-content: center;
-    align-items: center;
+        background: orange;
+        text-align: center;
+        justify-content: center;
+        align-items: center;
+        margin: 0;
+        flex-direction: column;
+        height: 100vh;
     
+}
+.container {
+        width: 100%;
+        width: 450px;
+        padding: 20px;
+        text-align: center;
+        box-sizing: border-box;
+        box-shadow: 0 15px 20px rgba(0, 0, 0, 0.6);
+        border-radius: 15px;
+        background: rgba(255, 255, 255, 0.9);
+        align-items: center;
+}
+.result-box { 
+        width: 100%;
+        max-width: 450px;
+        padding: 20px;
+        text-align: center;
+        box-sizing: border-box;
+        box-shadow: 0 15px 20px rgba(0, 0, 0, 0.6);
+        border-radius: 15px;
+        background: rgba(255, 255, 255, 0.9);
+        align-items: center;
 }
 </style>
 </head>
@@ -66,7 +91,9 @@ echo "</div>";
     echo "<p style='color:red;'>Please enter valid weight and height values.</p>";
 }
 }
+
 ?>
+</div>
 </div>
 </body>
 </html>
