@@ -1,53 +1,82 @@
-<!DOCTYPE html>
 <html>
 <head>
     <title> BMI Calculator </title>
-    <style type="text/css">
-body { 
-        background: orange;
-        text-align: center;
+<style type="text/css">
+
+    body { 
+        background-image: linear-gradient(to right, #ff8177 0%, #ff867a 0%, #ff8c7f 21%, #f99185 52%, #cf556c 78%, #b12a5b 100%);
+        display: flex;
         justify-content: center;
         align-items: center;
+        text-align: center;
         margin: 0;
         flex-direction: column;
-        height: 100vh;
-    
-}
-.container {
-        width: 100%;
-        width: 450px;
+    }
+    h1 {
+        color: #333;
+        margin-bottom: 20px;
+    }
+    input[type=submit] { 
+        padding: 10px 20px;
+        background-color: #4CAF50;
+        color: white;
+        font-size: 1.1em;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        border: double;
+    }
+    input[type="number"] {
+    padding: 10px;
+    font-size: 1em;
+    margin-bottom: 15px;
+    width: 200px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    }
+    .container {
+    width: 450px;
+    padding: 30px;
+    background-color: #ffffff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-top: 50px;
+    border-radius: 10px;
+    border: solid;
+    }
+    .center h2 {
+    font-size: 2em;
+    color: #4CAF50;
+    margin-bottom: 20px;
+    }
+    .result-box {
+        width: 80%;
+        max-width: 600px;
+        margin: 20px auto;
         padding: 20px;
-        text-align: center;
-        box-sizing: border-box;
-        box-shadow: 0 15px 20px rgba(0, 0, 0, 0.6);
-        border-radius: 15px;
-        background: rgba(255, 255, 255, 0.9);
-        align-items: center;
-}
-.result-box { 
-        width: 100%;
-        max-width: 450px;
-        padding: 20px;
-        text-align: center;
-        box-sizing: border-box;
-        box-shadow: 0 15px 20px rgba(0, 0, 0, 0.6);
-        border-radius: 15px;
-        background: rgba(255, 255, 255, 0.9);
-        align-items: center;
-}
+        background-image: linear-gradient(120deg, #d4fc79 0%, #96e6a1 100%);
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        border-radius: 10px;
+        border: double;
+        border-color: black;
+    }
+
+
 </style>
 </head>
 <body>
 <div class = "container">
+<center>
     <h2> BMI Calculator </h2>
     <form method = "POST">
     Height (kg): <input type = "number" name = "Height"  step="0.1" required><br>
     Weight (cm): <input type = "number" name = "Weight" step = "0.1" required><br>
     <input type="submit" name="calculator" class="btn" value="Calculate BMI">
 </form>
+</center>
 </div>
 
 <div class = "result-box">
+<center>
 <?php
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $Weight = $_POST['Weight'];
@@ -93,6 +122,7 @@ echo "</div>";
 }
 
 ?>
+</center>
 </div>
 </div>
 </body>
